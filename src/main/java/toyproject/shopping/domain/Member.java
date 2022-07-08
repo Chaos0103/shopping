@@ -28,4 +28,11 @@ public class Member {
 
     @Column(length = 11)
     private String phone;
+
+    public Member(String email, String password, String name, String phone) {
+        this.email = email;
+        this.password = password;
+        this.name = name;
+        this.phone = phone;
+    }
 }

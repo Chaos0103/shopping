@@ -30,4 +30,18 @@ public class Address extends TimeBaseEntity {
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "member_id")
     private Member member;
+
+    public Address(String recipient, AddressType address, String phone, Member member) {
+        this.recipient = recipient;
+        this.address = address;
+        this.phone = phone;
+        this.member = member;
+    }
+
+    //==비즈니스 로직==//
+    public void change(String recipient, AddressType address, String phone) {
+        this.recipient = recipient;
+        this.address = address;
+        this.phone = phone;
+    }
 }

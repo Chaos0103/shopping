@@ -28,4 +28,13 @@ public class Seller {
     @Column(length = 11)
     private String phone;
     private String storeName;
+
+    public Seller(String loginId, String password, String name, String email, String phone, String storeName) {
+        this.loginId = loginId;
+        this.password = password;
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+        this.storeName = storeName;
+    }
 }

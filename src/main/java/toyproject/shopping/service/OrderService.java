@@ -11,4 +11,8 @@ import toyproject.shopping.repository.OrderRepository;
 public class OrderService {
 
     private final OrderRepository orderRepository;
+
+    /**
+     * 상품주문
+     */
 }

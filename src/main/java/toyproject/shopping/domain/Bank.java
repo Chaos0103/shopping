@@ -24,4 +24,23 @@ public class Bank {
     @Column(length = 16, updatable = false)
     private String card;
     private int money;
+
+    public Bank(Member member, String account, String card, int money) {
+        this.member = member;
+        this.account = account;
+        this.card = card;
+        this.money = money;
+    }
+
+    //==비즈니스 로직==//
+    public void deposit(int money) {
+        this.money += money;
+    }
+
+    public void withdrawal(int money) {
+        if (this.money < money) {
+            throw new IllegalStateException("잔액부족");
+        }
+        this.money -= money;
+    }
 }

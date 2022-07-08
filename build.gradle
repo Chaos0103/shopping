@@ -15,7 +15,7 @@ plugins {
 
 group = 'toyproject'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = "16"
 
 configurations {
 	compileOnly {
@@ -68,3 +68,4 @@ compileQuerydsl {
 	options.annotationProcessorPath = configurations.querydsl
 }
 //querydsl 추가 끝
+targetCompatibility = JavaVersion.VERSION_16
